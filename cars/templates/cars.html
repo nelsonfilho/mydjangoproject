@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Cars</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #d31414;
+            padding: 8px;
+        }
+        th {
+            background-color: #03f771;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Cars</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Model</th>
+                <th>Brand</th>
+                <th>Factory Year</th>
+                <th>Value</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for car in cars %}
+            <tr>
+                <td>{{ car.id }}</td>
+                <td>{{ car.model }}</td>
+                <td>{{ car.brand }}</td>
+                <td>{{ car.factory_year }}</td>
+                <td>{{ car.value }}</td>
+                <td>{{ car.photo }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
