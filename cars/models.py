@@ -1,11 +1,14 @@
 from django.db import models
+from django.db.models import CharField
+
 
 class Brand(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200)
-    
-    def __str__(self) -> str:
+
+    def __str__(self) -> CharField:
         return self.name
+
 
 class Car(models.Model):
     id = models.AutoField(primary_key=True)
