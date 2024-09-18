@@ -94,6 +94,7 @@
   <form method="GET" action="{% url 'cars_list' %}">
     <input type="text" name="search" placeholder="Buscar carro...">
     <button type="submit">Buscar</button>
+    <button type="button" onclick="this.form.reset();">Limpar</button> <!-- New button added -->
   </form>
 
   <div class="car-grid">
